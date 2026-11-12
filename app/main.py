@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Response
-from prometheus_client import Counter, Gauge, generate_latest, CONTENT_TYPE_LATEST
+from prometheus_client import Counter, Gauge, Histogram, generate_latest, CONTENT_TYPE_LATEST
 import time
 import requests
 
