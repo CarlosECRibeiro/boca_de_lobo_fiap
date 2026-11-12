@@ -1,0 +1,11 @@
+groups:
+- name: BocaDeLoboAlerts
+  rules:
+  - alert: PrevisaoChuvaApiDown
+    expr: rain_api_up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Alerta de Falha Silenciosa: API de Previsão de Chuva caiu!"
+      description: "O sistema Boca de Lobo perdeu comunicação com os radares de tempestade. Risco de alagamentos sem aviso prévio."
